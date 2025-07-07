@@ -1,25 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Tanzim Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
-            text-align: center;
-            padding-top: 100px;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        p {
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanzim Hasan - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { display: flex; font-family: Arial, sans-serif; background-color: #1e1e1e; color: #eee; }
+    aside {
+      width: 220px; background-color: #811d1d; padding: 20px; height: 100vh; position: fixed;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    aside h1 { color: #fff; margin-bottom: 10px; font-size: 24px; }
+    nav a {
+      display: block; color: #fff; text-decoration: none; margin: 10px 0; padding: 8px;
+      background-color: #a93434; border-radius: 5px;
+    }
+    nav a:hover { background-color: #c94c4c; }
+    .container {
+      margin-left: 240px; padding: 40px; flex-grow: 1;
+    }
+    section { margin-bottom: 60px; }
+    h2 { margin-bottom: 20px; font-size: 28px; color: #fff; }
+    p, li { font-size: 16px; line-height: 1.6; }
+    ul { list-style: none; padding-left: 0; }
+    .skills, .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .card {
+      background-color: #2c2c2c; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 10px; margin-bottom: 15px;
+      border: none; border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: #c94c4c; color: white; padding: 10px 20px; border: none; border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover { background-color: #e75a5a; }
+  </style>
 </head>
 <body>
-    <h1>👋 Hello, I'm Tanzim</h1>
-    <p>Welcome to my GitHub Portfolio! This is just the beginning.</p>
+  <aside>
+    <h1>Tanzim Hasan</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#skills">What I'm good at</a>
+      <a href="#work">My Work</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </aside>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am Tanzim Hasan, a graduate of the Canadian University of Bangladesh with a BSc in Computer Science and Engineering. 
+        Although I have a technical background, my interests extend beyond programming — I’m passionate about IT support and 
+        cybersecurity, particularly in practical and real-world applications. I’ve completed multiple online certifications in networking and 
+        cybersecurity through Cisco and EC-Council. I’m a quick learner, a strong communicator, and I enjoy working collaboratively 
+        with teams to solve technical problems.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>What I'm good at</h2>
+      <div class="skills">
+        <div class="card">
+          <h3>Networking Basics</h3>
+          <p>Familiar with routing, IP addressing, and subnetting.</p>
+        </div>
+        <div class="card">
+          <h3>Cybersecurity Awareness</h3>
+          <p>Trained in identifying and responding to common cyber threats.</p>
+        </div>
+        <div class="card">
+          <h3>IT Support</h3>
+          <p>Strong troubleshooting skills for Windows systems and basic software issues.</p>
+        </div>
+        <div class="card">
+          <h3>Team Communication</h3>
+          <p>Clear, professional, and friendly communicator in both technical and non-technical settings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>My Work</h2>
+      <div class="projects">
+        <div class="card">Image or project coming soon</div>
+        <div class="card">Image or project coming soon</div>
+        <div class="card">Image or project coming soon</div>
+        <div class="card">Image or project coming soon</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>You can reach me using the form below or directly via email.</p>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your name">
+        <input type="email" name="email" placeholder="Your email">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" rows="6" placeholder="Your message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
 </body>
 </html>
